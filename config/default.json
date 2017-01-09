@@ -1,0 +1,32 @@
+{
+  "mongoose": {
+    "uri": "mongodb://localhost/bro",
+    "options": {
+      "server":
+      {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "producers":
+      [
+          "HP",
+          "Canon",
+          "Samsung",
+          "Xerox"
+      ],
+  "type":
+      [
+          "Лазерный",
+          "???"
+      ],
+  "status":
+      [
+          "Обычный",
+          "Новинка",
+          "Специальное предложение",
+          "Акция"
+      ]
+}

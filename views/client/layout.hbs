@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="keywords" content="заправка картриджей, москва, дешево, срочная заправка картриджей, ЭкономПринт, метро Рязанский проспект">
+      <meta name="description" content="Недорогая услуга &quot;заправка картриджей москва&quot; от компании &quot;ЭкономПринт&quot;. Реально дёшево! Все цены на сайте. Действует акция.">
+      <title>{{title}}</title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="/javascripts/functions/validateFormFields.js"></script>
+      <script src="/javascripts/functions/catalog.js"></script>
+      <script src="/javascripts/functions/shared.js"></script>
+      <script src="/javascripts/functions/client/map.js"></script>
+      <script src="/jquery/dist/jquery.min.js"></script>
+      <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+      <script src="/javascripts/functions/client/chat.js"></script>
+  </head>
+  <body onload="checkMap()">
+  <div class="fullscreen-bg">
+    <video autoplay loop muted poster="video/webm" class="fullscreen-bg__video">
+        <source src="/images/file.mp4" type="video/mp4">
+        <source src="/images/file.webm" type="video/webm">
+    </video>
+  </div>
+  <div class="content">
+      <div class="header" style="float: none; ">
+          <div class="navy">
+              <button id="Main" class="horizontal-navy-button navy-selected" onclick="clickMain(this)">Главная</button>
+              <button id="Catalog" class="horizontal-navy-button" onclick="">Каталог</button>
+              <button id="About" class="horizontal-navy-button" onclick="">О нас</button>
+              <button id="Contacts" class="horizontal-navy-button" onclick="clickContacts(this)">Контакты</button>
+          </div>
+          <table width="100%">
+              <tbody>
+              <tr>
+                  <td align="center"><h1 class="font-ec">Эконом Принт</h1></td>
+                  <td align="center"><h1>+7 (495) 201 - 93  - 22</h1></td>
+                  <td align="center"><h2>Пн - Пт  11:00 - 20:00<br>Сб - Вс  выходные</h2></td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+      {{{body}}}
+  </div>
+  <div class="chat-slider" id="chat-slider">
+      <div class="chat-slider-header" id="chat-slider-header">
+          Окно чата
+      </div>
+      <div class="demo">
+          <!--<h1>Демо простой час с помощью nodejs и socket.io</h1>-->
+          <div class="chat">
+              <div class="messages" id="messages"></div>
+              <div class="panel">
+                  <span class="nick"></span>
+                  <input type="text" name="message_text" id="message_text">
+                  <button type="button" id="message_btn">Отправить</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
+</html>
